@@ -1,0 +1,39 @@
+@mixin flex($align, $justify){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin css3($atribute, $params) {
+	#{$atribute}: #{$params};
+	-webkit-#{$atribute}: #{$params};
+	-khtml-#{$atribute}: #{$params};
+	-moz-#{$atribute}: #{$params};
+	-ms-#{$atribute}: #{$params};
+	-o-#{$atribute}: #{$params};
+}
+@mixin flex-position($pos) {
+	align-items: center;
+	justify-content: $pos;
+}
+@mixin scroll_bar {
+	$scrollbar_color: $primary_color !default;
+	$scrollbar_bg: #ccc !default;
+	scrollbar-color: $scrollbar_color $scrollbar_bg;
+	scrollbar-width: thin;
+
+	scrollbar-face-color: $scrollbar_color;
+	scrollbar-track-color: $scrollbar_bg;
+	&::-webkit-scrollbar {
+	    width: 5px;
+	    height: 5px;
+	}
+	&::-webkit-scrollbar-track {
+	    background: $scrollbar_bg; 
+	}
+	&::-webkit-scrollbar-thumb {
+	    background: $scrollbar_color;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+	    background: #68767b; 
+	}
+}
